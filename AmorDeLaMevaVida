@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'>
+    <title>Cartas para os Pirinéus</title>
+    <style>
+        body { background-color: #355070; font-family: 'Beth Ellen'; text-align: center; padding: 3%; color: black;}
+        .carta { background-image: url("note.jpg"); padding: 3%; border-radius: 5px; box-shadow: 0 6px 10px rgba(0,0,0,0.2); max-width: 97%; max-height: 97%; }
+        h1 { color: black; font-size: 20px; }
+        p { font-size: 14px; line-height: 1.9; white-space: pre-line; color: black; }
+        .date { font-size: 12px; margin-bottom: 20px; text-align: right; color: #6d597a; }
+    </style>
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <div class="carta">
+        <div class="date" id="data-atual"></div>
+        <h1 id="titulo">Olá, Viajante!</h1>
+        <p id="mensagem">A carregar a tua carta...</p>
+    </div>
 
+    <script>
+        // --- ADICIONA AQUI AS TUAS CARTAS ---
+        // Usa o formato "AAAA-MM-DD" para a data
+        const cartas = {
+            "2026-06-09": "Olá meu amor! Espero que o primeiro dia nos Pirinéus tenha sido incrível. Tem cuidado com as subidas! Já tenho saudades.",
+            "2026-06-10": "Bom dia! Hoje o caminho deve ser longo, mas a vista vai valer a pena. Beijo enorme!",
+            "2026-06-11": "Mais um dia! Lembra-te de beber água e tirar muitas fotos para me mostrares depois. Amo-te!"
+        };
+
+        function carregarCarta() {
+        
+        
+        
+        
+        
+        
+            const hoje = new Date();
+            
+            // Ajusta para o fuso horário local (AAAA-MM-DD)
+            const ano = hoje.getFullYear();
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const dataFormatada = `${ano}-${mes}-${dia}`;
+
+            // Mostrar a data bonita no ecrã
+            document.getElementById('data-atual').innerText = hoje.toLocaleDateString('pt-PT', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+            const tituloElement = document.getElementById('titulo');
+            const mensagemElement = document.getElementById('mensagem');
+
+            if (cartas[dataFormatada]) {
+                tituloElement.innerText = "A tua carta de hoje:";
+                mensagemElement.innerText = cartas[dataFormatada];
+            } else {
+                tituloElement.innerText = "Espreita mais tarde!";
+                mensagemElement.innerText = "Ainda não há uma carta para o dia de hoje, ou a caminhada começou cedo demais! Guarda as energias para a subida.";
+            }
+        }
+
+        // Executa a função ao abrir a página
+        carregarCarta();
+    </script>
 </body>
 </html>
