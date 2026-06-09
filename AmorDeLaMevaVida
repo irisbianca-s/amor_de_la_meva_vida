@@ -4,61 +4,49 @@
 <link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'>
     <title>Cartas para os Pirinéus</title>
     <style>
-        body { background-color: #355070; font-family: 'Beth Ellen'; text-align: center; padding: 3%; color: black;}
-        .carta { background-image: url("note.jpg"); padding: 3%; border-radius: 5px; box-shadow: 0 6px 10px rgba(0,0,0,0.2); max-width: 97%; max-height: 97%; }
+        body { background-image: url("https://i.pinimg.com/736x/5c/cb/39/5ccb3971edfad3fa0da2ff6ae677add2.jpg"); background-size: 110%; background-repeat: repeat-y; font-family: 'Beth Ellen'; text-align: left; padding: 6% 3% 6% 3%; color: black;}
+        .carta { background-image: url("data:image/jpeg;base64,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"); background-size: 100%; background-repeat: repeat-y; padding: 3% 4% 13% 13%; border-radius: 2px; box-shadow: 0 6px 10px rgba(0,0,0,0.2); max-width: 430px; height: 1000px; }
         h1 { color: black; font-size: 20px; }
-        p { font-size: 14px; line-height: 1.9; white-space: pre-line; color: black; }
-        .date { font-size: 12px; margin-bottom: 20px; text-align: right; color: #6d597a; }
+        p { font-size: 14px; line-height: 1.4; white-space: pre-line; color: #16264c; }
+        .date { font-size: 10px; margin: 0px 0px 20px; text-align: right; color: #6d597a; }
     </style>
 </head>
-<body>
 
+<body>
     <div class="carta">
         <div class="date" id="data-atual"></div>
-        <h1 id="titulo">Olá, Viajante!</h1>
-        <p id="mensagem">A carregar a tua carta...</p>
+        <p id="saudacao">Querido Joan,</p>
+        <p id="mensagem">A encontrar a carta...</p>
+        <p id="despedida"><br>Da tua mais amada, <br>Íris Bianca.</p>
     </div>
 
     <script>
-        // --- ADICIONA AQUI AS TUAS CARTAS ---
-        // Usa o formato "AAAA-MM-DD" para a data
         const cartas = {
-            "2026-06-09": "Olá meu amor! Espero que o primeiro dia nos Pirinéus tenha sido incrível. Tem cuidado com as subidas! Já tenho saudades.",
-            "2026-06-10": "Bom dia! Hoje o caminho deve ser longo, mas a vista vai valer a pena. Beijo enorme!",
-            "2026-06-11": "Mais um dia! Lembra-te de beber água e tirar muitas fotos para me mostrares depois. Amo-te!"
+        	"2026-06-10": "Só existem duas coisas mais solitária do que uma noite nas montanhas: os meus braços na tua ausência. Estou a guardar a covinha no meu peito para quando puderes voltar a unir o teu coração ao meu. Normalmente quando os gajos têm no perfil do Hinge que gostam de caminhadas e viajar acabam por não gostar de verdade - é uma coisa que se diz para impressionar. Mas agora que te conheço e vejo o quão aventureiro tu és passo a perceber um bocadinho melhor o fado :)",
+            "2026-06-11": "Bom dia! Hoje o caminho deve ser longo, mas a vista vai valer a pena. Beijo enorme!",
+            "2026-06-12": "Mais um dia! Lembra-te de beber água e tirar muitas fotos para me mostrares depois. Amo-te!",
         };
 
         function carregarCarta() {
-        
-        
-        
-        
-        
-        
+
             const hoje = new Date();
-            
-            // Ajusta para o fuso horário local (AAAA-MM-DD)
             const ano = hoje.getFullYear();
             const mes = String(hoje.getMonth() + 1).padStart(2, '0');
             const dia = String(hoje.getDate()).padStart(2, '0');
             const dataFormatada = `${ano}-${mes}-${dia}`;
 
-            // Mostrar a data bonita no ecrã
             document.getElementById('data-atual').innerText = hoje.toLocaleDateString('pt-PT', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
             const tituloElement = document.getElementById('titulo');
             const mensagemElement = document.getElementById('mensagem');
 
             if (cartas[dataFormatada]) {
-                tituloElement.innerText = "A tua carta de hoje:";
                 mensagemElement.innerText = cartas[dataFormatada];
             } else {
                 tituloElement.innerText = "Espreita mais tarde!";
                 mensagemElement.innerText = "Ainda não há uma carta para o dia de hoje, ou a caminhada começou cedo demais! Guarda as energias para a subida.";
             }
         }
-
-        // Executa a função ao abrir a página
         carregarCarta();
     </script>
 </body>
